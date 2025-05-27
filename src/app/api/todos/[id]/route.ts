@@ -34,7 +34,7 @@ export async function PUT(req: Request, context: { params: Promise<{ id: string 
   return NextResponse.json({ message: 'Task updated successfully' }, { status: 200 });
 }
 
-export async function DELETE(req: Request, context: { params: { id: string }, }) {
+export async function DELETE(req: Request, context: { params: Promise<{ id: string }>, }) {
   const session = await getServerSession(authOptions);
 
   const { id } = await context.params;
