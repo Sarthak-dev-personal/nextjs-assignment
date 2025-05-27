@@ -1,7 +1,7 @@
 import { NextResponse } from 'next/server';
 import clientPromise from '../../../../config/mongodb';
 import { getServerSession } from 'next-auth/next';
-import { authOptions } from '../../auth/[...nextauth]/route';
+import { authOptions } from '../../auth/[...nextauth]/auth-options';
 import { ObjectId } from 'mongodb';
 
 export async function PUT(req: Request, context: { params: { id: string }, }) {
