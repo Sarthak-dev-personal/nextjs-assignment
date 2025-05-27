@@ -1,7 +1,8 @@
 import CredentialsProvider from 'next-auth/providers/credentials';
 import { MongoDBAdapter } from '@next-auth/mongodb-adapter';
 import clientPromise from '../../../../config/mongodb';
-import bcrypt from 'bcrypt';
+import * as bcrypt from 'bcrypt';
+import { SessionStrategy } from 'next-auth';
 
 export const authOptions = {
   providers: [
@@ -27,7 +28,7 @@ export const authOptions = {
           throw new Error('Invalid credentials');
         }
 
-        return { id: user._id, name: user.username };
+        return { id: user._id, name: user.username } as any;
       }
     })
   ],
@@ -37,7 +38,7 @@ export const authOptions = {
     newUser: '/auth/register',
   },
   session: {
-    strategy: 'jwt',
+    strategy: 'jwt' as SessionStrategy,
   },
   callbacks: {
     async jwt({ token, user }) {
