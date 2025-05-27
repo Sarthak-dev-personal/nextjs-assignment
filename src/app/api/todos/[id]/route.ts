@@ -4,7 +4,7 @@ import { getServerSession } from 'next-auth/next';
 import { authOptions } from '../../auth/[...nextauth]/auth-options';
 import { ObjectId } from 'mongodb';
 
-export async function PUT(req: Request, context: { params: { id: string }, }) {
+export async function PUT(req: Request, context: { params: Promise<{ id: string }>, }) {
   const session = await getServerSession(authOptions);
 
   const { id } = await context.params;
