@@ -17,7 +17,6 @@ export const authOptions = {
         const db = client.db('next-js-assignment');
         const usersCollection = db.collection('users');
 
-        // Find user by username
         const user = await usersCollection.findOne({ username: credentials.username });
         if (!user) {
           throw new Error('Invalid credentials');

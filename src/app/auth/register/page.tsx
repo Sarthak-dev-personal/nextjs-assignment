@@ -3,7 +3,7 @@
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
 
-export default function Register() {
+const Register = () => {
   const [username, setUsername] = useState<string>('');
   const [password, setPassword] = useState<string>('');
   const router = useRouter();
@@ -54,3 +54,5 @@ export default function Register() {
     </div>
   );
 }
+
+export default Register;

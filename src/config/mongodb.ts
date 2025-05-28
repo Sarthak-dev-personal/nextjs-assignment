@@ -1,10 +1,17 @@
-import { MongoClient, MongoClientOptions } from 'mongodb';
+import {
+  MongoClient,
+  MongoClientOptions,
+} from 'mongodb';
 
+/**
+ * Mongo DB connection string URI.
+ */
 const uri = process.env.MONGODB_URI;
+
 const options = {
   useNewUrlParser: true,
   useUnifiedTopology: true,
-} as MongoClientOptions;
+} as MongoClientOptions; // Typecasting to avoid prod build errors.
 
 let client: MongoClient;
 let clientPromise: Promise<MongoClient>;

@@ -7,10 +7,10 @@ export default function Home() {
       <p className="mb-4">Manage your tasks efficiently and effectively.</p>
       <div className="space-x-4">
         <Link href="/auth/register">
-          <span className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 cursor-pointer">Register</span>
+          <span className="bg-gray-600 text-white px-4 py-2 rounded hover:bg-blue-600 cursor-pointer">Register</span>
         </Link>
         <Link href="/auth/login">
-          <span className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 cursor-pointer">Login</span>
+          <span className="bg-gray-600 text-white px-4 py-2 rounded hover:bg-blue-600 cursor-pointer">Login</span>
         </Link>
       </div>
     </div>

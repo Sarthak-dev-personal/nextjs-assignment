@@ -4,7 +4,7 @@ import { signIn } from 'next-auth/react';
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
 
-export default function Login() {
+const Login = () => {
   const [username, setUsername] = useState<string>('');
   const [password, setPassword] = useState<string>('');
   const router = useRouter();
@@ -52,3 +52,5 @@ export default function Login() {
     </div>
   );
 }
+
+export default Login;

@@ -37,5 +37,6 @@ export async function POST(req: Request) {
   };
 
   await todosCollection.insertOne(newTodo);
+
   return NextResponse.json({ message: 'TODO created successfully' }, { status: 201 });
 }

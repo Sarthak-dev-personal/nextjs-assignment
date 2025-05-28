@@ -22,7 +22,6 @@ export async function PUT(req: Request, context: { params: Promise<{ id: string 
     return NextResponse.json({ message: 'Invalid ID' }, { status: 400 });
   }
 
-
   await todosCollection.updateOne({ _id: new ObjectId(id) }, {
     $set: { 
         title,
@@ -50,7 +49,6 @@ export async function DELETE(req: Request, context: { params: Promise<{ id: stri
   if (!id || !ObjectId.isValid(id)) {
     return NextResponse.json({ message: 'Invalid ID' }, { status: 400 });
   }
-
 
   await todosCollection.findOneAndDelete({ _id: new ObjectId(id) });
 

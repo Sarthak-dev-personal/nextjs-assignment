@@ -1,3 +1,5 @@
+## Keeping the relevant auto generated content of the md file as is.
+
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started
@@ -16,21 +18,21 @@ bun dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
 This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
-## Learn More
+The Mongo DB server used in this application has access to all the ipv4 addresses for 1 week starting 28th May, so you should be able to run this code in local.
 
-To learn more about Next.js, take a look at the following resources:
+Features implemented in this app:
+    1. Register/ Login functionality. We have custom routes for both.
+    2. Authentication is taken care of by Next JS library.
+    3. Once logged in user can see the dashboard which displays the TODO tasks in a tabular format.
+    4. The Add button opens a popup to add a new task
+    5. User won't be able to set the status as completed when creating a new task.
+    6. The Edit button in the table allows to edit the particular TODO, user can now update the status to complete.
+    7. The delete button deletes the task.
+    8. Note: User has to manually log out from then portal.( The session doesn't expire automatically.)
+    9. Already registerd users: sarthak/sarthak1, sarthak1/sarthak2
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Bonus features implemented:
+    1. User is able to mark the task as complete.
+    2. Application is deployed on vercel. URL: "https://nextjs-assignment-mocha.vercel.app/" (It'll be accessible for 1 week starting 28th May).

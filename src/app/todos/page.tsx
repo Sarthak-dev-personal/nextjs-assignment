@@ -9,7 +9,7 @@ import AddOrEditTask, {
   IToDoData,
 } from './add-edit-task';
 
-export default function Todos() {
+const Todos = () => {
   const { data: session, status } = useSession();
   const router = useRouter();
   const [todos, setTodos] = useState([]);
@@ -117,7 +117,7 @@ export default function Todos() {
               <td className="border border-gray-300 p-2 text-center">{todo.description}</td>
               <td className="border border-gray-300 p-2 text-center">{todo.status}</td>
               <td className="border border-gray-300 p-2 text-center">
-                <button onClick={() => addOrEditTask(false, todo)} className="bg-gray-600 text-white p-2 rounded mb-4 min-w-1/4">Edit</button>
+                <button onClick={() => addOrEditTask(false, todo)} className="bg-green-500 text-white p-2 rounded mb-4 min-w-1/4">Edit</button>
                 <button onClick={() => deleteTask(todo)} className="bg-red-500 text-white p-2 rounded mb-4 ml-10 min-w-1/4">Delete</button>
               </td>
             </tr>
@@ -125,6 +125,7 @@ export default function Todos() {
         </tbody>
       </table>
 
+      {/* Add or Edit Task Modal */}
       {isModalOpen && (
         <AddOrEditTask
           todoItemBeingEdited={todoItemBeingEdited}
@@ -135,3 +136,5 @@ export default function Todos() {
     </div>
   );
 }
+
+export default Todos;
